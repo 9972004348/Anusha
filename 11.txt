@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<h1> To Do List</h1>
+<form id="todoForm">
+    <input id="todoInput">
+    <button type="button" onclick="todoList()">click me</button>
+</form>
+<ol id="todoList"></ol>
+<script>
+function todoList(){
+var item = document.getElementById("todoInput").value;
+var text = document.createTextNode(item);
+var newItem = document.createElement("li");
+newItem.appendChild(text);
+document.getElementById("todoInput").appendChild(newItem);
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+function getInfo() {
+    var username = document.getElementById("email").value
+    var password = document.getElementById("password").value
+    for(i=0; i<ObjPeople.length;i++){
+        if(username==ObjPeople[i].username && password==ObjPeople[i].password){
+            console.log(username + "is logged in")
+        }
+    }
+}
